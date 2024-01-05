@@ -1,0 +1,46 @@
+@keyframes growTitle {
+  0% {
+    font-size: 12px; /* Initial font size */
+  }
+  100% {
+    font-size: 36px; /* Final font size */
+  }
+}
+
+/* Styles for the title */
+.title {
+  text-align: center;
+  font-size: 24px; /* Initial font size */
+  font-weight: bold;
+  animation: growTitle 2s forwards; /* Animation duration is 2 seconds */
+}
+
+/* Styles for the text box */
+.text-box {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #3498db; /* Blue border color */
+  padding: 10px;
+  font-size: 12px;
+  color: #3498db; /* Blue text color */
+}
+
+.multicolor {
+  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);  
+  -webkit-background-clip: text;
+  -moz-background-clip: text; 
+  background-clip: text;
+  color: transparent;
+}
+
+h1 {
+  text-align: center;
+}
+
+
+.variables {
+  text-align: center;
+  font-size: 12px;
+  color: #473f74; 
+}
+

@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+    <head>
+      <title>Votre profil</title>
+      <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    </head>
+    <body>
+      <h1> Votre profil est nom: {{name}} poids {{poids}} taille {{taille}} age {{age}} </h1>
+      <a href="{{ url_for('accueil') }}" method="GET"> Retourner à la page d'accueil </a>
+    </body>
+</html>

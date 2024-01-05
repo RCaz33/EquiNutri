@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+  <title>Acceuil</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+</head>
+
+<body>
+  <div class="title">
+    <h1>remplissez le formulaire</h1>
+  </div>
+
+  <div class="variables">
+    <h2>Veuillez entrer votre nom</h2>
+    <form action="/next" method="POST">
+      <input type="text" name="username">
+    </form>
+
+    <h2>Veuillez entrer votre poids</h2>
+    <form action="/next" method="POST">
+      <input type="text" name="poids">
+    </form>
+
+    <h2>Veuillez entrer votre taille</h2>
+    <form action="/next" method="POST">
+      <input type="text" name="taille">
+    </form>
+
+    <h2>Veuillez entrer votre age</h2>
+    <form action="/next" method="POST">
+      <input type="text" name="age">
+    </form>
+
+  </div>
+
+  <div>
+    <p class="text-box"> Sur cette page, vous allez entrer votre question qui sera analysée au regard du texte d'entraînement.</p>
+  </div>
+  <div>
+    <form action="{{ url_for('profil') }}" method="POST">
+      <button type="submit">Cliquez sur ce lien pour générer votre réponse</button>
+  </form>
+  
+  </div>
+
+</body>
+</html>
