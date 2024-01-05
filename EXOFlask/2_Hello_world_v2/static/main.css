@@ -1,8 +1,36 @@
-.multicolor {
-  background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);  
-  -webkit-background-clip: text;
-  -moz-background-clip: text; 
-  background-clip: text;
-  color: transparent;
-  text-align: center;
-} 
+@keyframes moveLetters {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.moving-letters {
+  display: inline-block;
+  font-size: 36px;
+  font-family: 'Arial', sans-serif;
+  color: #3498db;
+  animation: moveLetters 2s infinite;
+}
+
+@keyframes spinLetters {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinning-letters {
+  display: inline-block;
+  font-size: 36px;
+  font-family: 'Arial', sans-serif;
+  color: #3498db;
+  animation: spinLetters 3s infinite;
+}
