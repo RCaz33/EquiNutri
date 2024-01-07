@@ -4,8 +4,26 @@
       <title>Votre profil</title>
       <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     </head>
+
     <body>
-      <h1> Votre profil est nom: {{name}} poids {{poids}} taille {{taille}} age {{age}} </h1>
-      <a href="{{ url_for('accueil') }}" method="GET"> Retourner à la page d'accueil </a>
+      <h1 class="title"> Votre profil est:</h1>
+        <table class="center">
+          <tr>
+            <th>Nom</th>
+            <th>Poids</th>
+            <th>Taille</th>
+            <th>Age</th>
+          </tr>
+          <tr>
+            <td>{{name}} </td>
+            <td>{{poids}} </td>
+            <td>{{taille}} </td>
+            <td>{{age}} </td>
+          </tr>
+        </table> 
+       <h2>Votre indice de masse corporelle est {{IMC}}</h2>
+       <h2>Interpretation OMS: {{OMS_interpret}}</h2>
+      <a href="{{ url_for('accueil') }}" method="GET"> Changer les caractéristique du profil </a>     
     </body>
 </html>
+
