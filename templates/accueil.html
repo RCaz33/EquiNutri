@@ -1,46 +1,41 @@
 <!doctype html>
 <html>
 <head>
-  <title>Acceuil</title>
+  <title>EquiNutri</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
 </head>
 
 <body>
+  <div class="container">
   <div class="title">
     <h1>remplissez le formulaire</h1>
   </div>
+  </div>
 
+
+<div class="container">
   <div class="variables">
-    <h2>Veuillez entrer votre nom</h2>
-    <form action="/next" method="POST">
-      <input type="text" name="username">
-    </form>
+    <h2>Veuillez renseigner les différent champs</h2>
+    <form action="/profile" method="POST">
+      <label for="name">Pseudo:</label>
+      <input type="text" id="name" name="name" value="john doe"><br>
 
-    <h2>Veuillez entrer votre poids</h2>
-    <form action="/next" method="POST">
-      <input type="text" name="poids">
-    </form>
+      <label for="poids">Poids:  </label>
+      <input type="poids" id="poids" name="poids" value="82" required><br>
 
-    <h2>Veuillez entrer votre taille</h2>
-    <form action="/next" method="POST">
-      <input type="text" name="taille">
-    </form>
+      <label for="taille">Taille:  </label>
+      <input type="taille" id="taille" name="taille" value="1.81" required><br>
 
-    <h2>Veuillez entrer votre age</h2>
-    <form action="/next" method="POST">
-      <input type="text" name="age">
-    </form>
+      <label for="age">Age:    </label>
+      <input type="age" id="age" name="age" value="30"><br><br>
 
+      <button type="Définir profil">Soumettre</button>
+    </form>
   </div>
+</div>
 
-  <div>
-    <p class="text-box"> Sur cette page, vous allez entrer votre question qui sera analysée au regard du texte d'entraînement.</p>
-  </div>
-  <div>
-    <form action="{{ url_for('profil') }}" method="POST">
-      <button type="submit">Cliquez sur ce lien pour générer votre réponse</button>
-  </form>
-  
+  <div class="container">
+    <p class="text-box"> Renseignez au moins poids et taille pour continuer</p>
   </div>
 
 </body>
